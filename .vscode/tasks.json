@@ -32,7 +32,7 @@
       }
     },
     {
-      "label": "PreLaunchTask for Run hrsuccessassist",
+      "label": "PreLaunchTask for Run fullstack2",
       "type": "process",
       "command": "npx",
       "args": [
@@ -48,12 +48,12 @@
     },
     {
       "type": "dpt.ptdeploy",
-      "label": "Deploy hrsuccessassist",
+      "label": "Deploy fullstack2",
       "taskType": "Deploy"
     },
     {
       "type": "dpt.ptdeploy",
-      "label": "Enable Discovery and Deploy hrsuccessassist",
+      "label": "Enable Discovery and Deploy fullstack2",
       "taskType": "Deploy",
       "enableDiscovery": "true"
     }

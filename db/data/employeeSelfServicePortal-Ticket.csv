@@ -1,0 +1,8 @@
+ID;ticketID;title;description;status_code;priority_code;employee_ID;businessPartner_ID
+da71eba2-515e-40b3-84dc-1582abfd26a9;TCK001;Software Issue;Unable to access email on company laptop;Open;High;49fc6955-d4fa-4d93-8562-312366068418;f843bcc6-2a0e-460c-8108-4debe150687a
+a64c3f7e-0041-45a9-9e75-a72c291a4625;TCK002;Network Problem;Slow internet connection in the office;Open;Medium;93e18cc9-551c-4d63-8416-76fdda726810;8aee4cff-b0cb-4487-ba55-57403dfc2545
+66318b58-9e39-4827-a447-4267851e29a5;TCK003;Hardware Failure;Computer won't turn on;Open;VeryHigh;c7d93a7f-8e87-4a51-8927-a003334cef02;618308fe-28ed-4a29-9cf1-93e33e8201f2
+0ff50bfc-23c9-478a-82f3-04fccfbd6b7e;TCK004;Software Upgrade;Requesting upgrade to latest version of software;Open;Low;6ee5705c-41eb-4c90-96b4-359880c11b28;8be17d88-cbd3-4a22-9e25-f2d1c80dbdad
+f88d5e0c-373e-422e-ac9c-3d367605a37a;TCK005;Training Request;Need training on new project management tool;Open;Medium;caff6c19-6416-4222-95ac-eed65ca121fc;be8aa0fc-4abe-4bd3-b77b-931b5eb31e3e
+4fb42ad5-84f6-4433-a9c5-eb5970592a45;TCK006;Printer Issue;Printer not printing documents;Open;High;49fc6955-d4fa-4d93-8562-312366068418;f843bcc6-2a0e-460c-8108-4debe150687a
+388bb87e-f51e-4b4e-a7c1-8d3ec483bf1d;TCK007;Access Request;Need access to specific folder on shared drive;Open;Medium;93e18cc9-551c-4d63-8416-76fdda726810;8aee4cff-b0cb-4487-ba55-57403dfc2545

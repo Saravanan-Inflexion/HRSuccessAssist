@@ -1,7 +1,7 @@
 {
     "mdk.platform": "iOS & Android & Web",
-    "mdk.defaultEditor": "Text Editor",
     "SAP HANA Database Explorer.ShowXsAdvancedConnections": true,
+    "mdk.defaultEditor": "Text Editor",
     "workbench.editorAssociations": {
         "*.app": "default",
         "*.global": "default",

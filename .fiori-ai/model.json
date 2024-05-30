@@ -1,0 +1,246 @@
+{
+    "namespace": "employeeSelfServicePortal",
+    "entities": [
+        {
+            "name": "Ticket",
+            "label": "Ticket",
+            "associations": [
+                {
+                    "name": "employee",
+                    "target": "Employee",
+                    "multiplicity": "one"
+                },
+                {
+                    "name": "businessPartner",
+                    "target": "HRBusinessPartner",
+                    "multiplicity": "one"
+                },
+                {
+                    "name": "resolutions",
+                    "target": "Resolution",
+                    "multiplicity": "many",
+                    "backAssociation": "ticket"
+                }
+            ],
+            "labelPlural": "Tickets",
+            "elements": [
+                {
+                    "name": "ID",
+                    "type": "UUID",
+                    "key": true,
+                    "label": ""
+                },
+                {
+                    "name": "ticketID",
+                    "type": "String(50)",
+                    "label": "Id",
+                    "additionalInfo": "Unique identifier for the ticket",
+                    "essentialElement": true,
+                    "semanticKey": true,
+                    "values": [],
+                    "hasFixedValuesList": false
+                },
+                {
+                    "name": "title",
+                    "type": "String(50)",
+                    "label": "Title",
+                    "additionalInfo": "Title of the ticket",
+                    "essentialElement": true,
+                    "values": [],
+                    "hasFixedValuesList": false
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "label": "Description",
+                    "additionalInfo": "Description of the ticket",
+                    "essentialElement": true,
+                    "values": [],
+                    "hasFixedValuesList": false
+                },
+                {
+                    "name": "status",
+                    "type": "String(20)",
+                    "label": "Status",
+                    "additionalInfo": "Status of the ticket. Allowed values: Open, Close",
+                    "essentialElement": true,
+                    "values": [
+                        "Open",
+                        "Close"
+                    ],
+                    "hasFixedValuesList": true,
+                    "hasColorsOrCriticality": true,
+                    "reason": "The status of a ticket can be considered good (Close) or bad (Open) in most contexts.",
+                    "mapping": [
+                        {
+                            "value": "Open",
+                            "colorOrCriticality": "negative",
+                            "reason": "Open status indicates an unresolved or pending ticket."
+                        },
+                        {
+                            "value": "Close",
+                            "colorOrCriticality": "positive",
+                            "reason": "Close status indicates a resolved or completed ticket."
+                        }
+                    ],
+                    "criticalities": [
+                        1,
+                        3
+                    ]
+                },
+                {
+                    "name": "priority",
+                    "type": "String(20)",
+                    "label": "Priority",
+                    "additionalInfo": "Priority of the ticket. Allowed values: Very High, High, Medium, Low",
+                    "essentialElement": true,
+                    "values": [
+                        "Very High",
+                        "High",
+                        "Medium",
+                        "Low"
+                    ],
+                    "hasFixedValuesList": true,
+                    "hasColorsOrCriticality": false,
+                    "reason": "The priority of a ticket is usually neutral and does not have inherent good or bad connotations.",
+                    "mapping": []
+                }
+            ]
+        },
+        {
+            "name": "Employee",
+            "label": "Employee",
+            "associations": [
+                {
+                    "name": "tickets",
+                    "target": "Ticket",
+                    "multiplicity": "many",
+                    "backAssociation": "employee"
+                }
+            ],
+            "labelPlural": "Employees",
+            "elements": [
+                {
+                    "name": "ID",
+                    "type": "UUID",
+                    "key": true,
+                    "label": ""
+                },
+                {
+                    "name": "employeeID",
+                    "type": "String(50)",
+                    "label": "Id",
+                    "additionalInfo": "Unique identifier for the employee",
+                    "essentialElement": true,
+                    "semanticKey": true,
+                    "values": [],
+                    "hasFixedValuesList": false
+                },
+                {
+                    "name": "name",
+                    "type": "String(50)",
+                    "label": "Name",
+                    "additionalInfo": "Name of the employee",
+                    "essentialElement": true,
+                    "values": [],
+                    "hasFixedValuesList": false
+                }
+            ]
+        },
+        {
+            "name": "HRBusinessPartner",
+            "label": "HR Business Partner",
+            "associations": [
+                {
+                    "name": "tickets",
+                    "target": "Ticket",
+                    "multiplicity": "many",
+                    "backAssociation": "businessPartner"
+                }
+            ],
+            "labelPlural": "HR Business Partners",
+            "elements": [
+                {
+                    "name": "ID",
+                    "type": "UUID",
+                    "key": true,
+                    "label": ""
+                },
+                {
+                    "name": "hRBusinessPartnerID",
+                    "type": "String(50)",
+                    "label": "Id",
+                    "additionalInfo": "Unique identifier for the HR Business Partner",
+                    "essentialElement": true,
+                    "semanticKey": true,
+                    "values": [],
+                    "hasFixedValuesList": false
+                },
+                {
+                    "name": "name",
+                    "type": "String(50)",
+                    "label": "Name",
+                    "additionalInfo": "Name of the HR Business Partner",
+                    "essentialElement": true,
+                    "values": [],
+                    "hasFixedValuesList": false
+                }
+            ]
+        },
+        {
+            "name": "Resolution",
+            "label": "Resolution",
+            "associations": [
+                {
+                    "name": "ticket",
+                    "target": "Ticket",
+                    "multiplicity": "one",
+                    "selfContained": false
+                }
+            ],
+            "labelPlural": "Resolutions",
+            "elements": [
+                {
+                    "name": "ID",
+                    "type": "UUID",
+                    "key": true,
+                    "label": ""
+                },
+                {
+                    "name": "resolutionID",
+                    "type": "String(50)",
+                    "label": "Id",
+                    "additionalInfo": "Unique identifier for the resolution",
+                    "essentialElement": true,
+                    "semanticKey": true,
+                    "values": [],
+                    "hasFixedValuesList": false
+                }
+            ]
+        }
+    ],
+    "service": {
+        "name": "employeeSelfServicePortalSrv",
+        "path": "srv/service.cds"
+    },
+    "applications": [
+        {
+            "pages": [
+                {
+                    "type": "ListReport",
+                    "entityType": "Ticket"
+                },
+                {
+                    "type": "ObjectPage",
+                    "entityType": "Ticket",
+                    "objectPageContent": {
+                        "tableSectionAssociations": [
+                            "resolutions"
+                        ]
+                    }
+                }
+            ],
+            "name": "hrQueries"
+        }
+    ]
+}
