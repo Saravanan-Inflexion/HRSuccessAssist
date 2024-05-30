@@ -1,0 +1,30 @@
+<mvc:View controllerName="hrqueries.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form" displayBlock="true">
+
+    <Page id="loginPage" title="{i18n>loginTitle}" showHeader="false">
+        <content>
+            <FlexBox justifyContent="Center" alignItems="Center" class="sapUiContentPadding" height="100%">
+                <f:Card class="sapUiTinyMargin" width="300px">
+                    <f:content>
+                        <form:SimpleForm id="loginForm" layout="ResponsiveGridLayout" editable="true" columnsL="1" columnsM="1">
+                            <form:content>
+                                <Title text="HR Success Assist" titleStyle="H4" textAlign="Center"></Title>
+                            </form:content>
+                            <form:content>
+                                <Label text="Username" />
+                                <Input id="usernameInput" value="{/username}" />
+                                <Label text="Password" />
+                                <Input id="passwordInput" type="Password"  value="{/password}" />
+                                <Link text="Forgot Password?" press="onForgotPasswordPress" />
+                                <Button text="SignIn" press="onSignInPress" width="100%" type="Emphasized"/>
+                            </form:content>
+                        </form:SimpleForm>
+                    </f:content>
+                </f:Card>
+            </FlexBox>
+        </content>
+    </Page>
+</mvc:View>

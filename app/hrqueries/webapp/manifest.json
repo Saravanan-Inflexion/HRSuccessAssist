@@ -82,10 +82,15 @@
             "css": []
         },
         "routing": {
-            "config": {},
+            "config": { },
             "routes": [
                 {
-                    "pattern": ":?query:",
+                    "pattern": "",
+                    "name": "Login",
+                    "target": "Login"
+                },
+                {
+                    "pattern": "TicketList",
                     "name": "TicketList",
                     "target": "TicketList"
                 },
@@ -96,6 +101,11 @@
                 }
             ],
             "targets": {
+                "Login": {
+                    "viewName": "hrqueries.view.Login",
+                    "viewId": "Login",
+                    "viewLevel": 1
+                },
                 "TicketList": {
                     "type": "Component",
                     "id": "TicketList",

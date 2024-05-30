@@ -1,0 +1,5 @@
+<mvc:View controllerName="hrqueries.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <App ></App>
+</mvc:View>

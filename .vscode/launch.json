@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run fullstack2",
+      "name": "Run hrsuccessassist",
       "runtimeExecutable": "cds",
       "request": "launch",
       "args": [
@@ -13,10 +13,11 @@
       "internalConsoleOptions": "openOnSessionStart",
       "type": "pwa-node",
       "cwd": "${workspaceFolder}",
-      "preLaunchTask": "PreLaunchTask for Run fullstack2",
+      "preLaunchTask": "PreLaunchTask for Run hrsuccessassist",
       "envFile": "${workspaceFolder}/env/.env1",
       "env": {
-        "run.config": "{\"handlerId\":\"lcap_run_config_handler_id\",\"runnableId\":\"{\\\"projectPath\\\":\\\"/home/user/projects/fullstack2\\\",\\\"profileName\\\":\\\"\\\"}\"}"
+        "run.config": "{\"handlerId\":\"lcap_run_config_handler_id\",\"runnableId\":\"{\\\"projectPath\\\":\\\"/home/user/projects/hrsuccessassist\\\",\\\"profileName\\\":\\\"\\\"}\"}",
+        "runConfigurations": "{}"
       }
     }
   ]

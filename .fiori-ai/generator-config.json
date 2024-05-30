@@ -4,8 +4,8 @@
     "project": {
         "name": "hrqueries",
         "targetFolder": "/home/user/.fioritools/fiori-tools-ai",
-        "title": "AI generated App hrqueries",
-        "description": "AI generated App hrqueries",
+        "title": "HR Service Assist",
+        "description": "HR Service Assist",
         "ui5Version": "",
         "localUI5Version": "1.82.2",
         "sapux": true

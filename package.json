@@ -48,6 +48,15 @@
         "[production]": {
           "kind": "xsuaa"
         }
+      },
+      "SuccessFactors": {
+        "kind": "odata-v2",
+        "model": "srv/external/SuccessFactors",
+        "[production]": {
+          "credentials": {
+            "destination": "SuccessFactors"
+          }
+        }
       }
     },
     "features": {
