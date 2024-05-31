@@ -19,7 +19,7 @@
                                 <Label text="Password" />
                                 <Input id="passwordInput" type="Password"  value="{/password}" />
                                 <Link text="Forgot Password?" press="onForgotPasswordPress" />
-                                <Button text="SignIn" press="onSignInPress" width="100%" type="Emphasized"/>
+                                <Button text="Sign In" press="onSignInPress" width="100%" type="Emphasized"/>
                             </form:content>
                         </form:SimpleForm>
                     </f:content>

@@ -24,9 +24,9 @@ sap.ui.define([
                 // Simulate successful login
                 MessageToast.show("Login successful!");
 
-                // Navigate to TicketList page (Assuming you have a router configured)
+                // Navigate to Dashboard page (Assuming you have a router configured)
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                oRouter.navTo("TicketList");
+                oRouter.navTo("Dashboard");
             } else {
                 MessageToast.show("Please enter a username and password.");
             }

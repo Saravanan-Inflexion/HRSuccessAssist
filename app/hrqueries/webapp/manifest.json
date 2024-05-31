@@ -82,12 +82,17 @@
             "css": []
         },
         "routing": {
-            "config": { },
+            "config": {},
             "routes": [
                 {
                     "pattern": "",
                     "name": "Login",
                     "target": "Login"
+                },
+                {
+                    "pattern": "Dashboard",
+                    "name": "Dashboard",
+                    "target": "Dashboard"
                 },
                 {
                     "pattern": "TicketList",
@@ -104,6 +109,11 @@
                 "Login": {
                     "viewName": "hrqueries.view.Login",
                     "viewId": "Login",
+                    "viewLevel": 1
+                },
+                "Dashboard": {
+                    "viewName": "hrqueries.view.Dashboard",
+                    "viewId": "Dashboard",
                     "viewLevel": 1
                 },
                 "TicketList": {
